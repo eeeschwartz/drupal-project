@@ -30,5 +30,6 @@ script:
   - ./../vendor/bin/drush sql-dump > clean-install.sql
   - ./../vendor/bin/drush en -y bootstrap
   - ./../vendor/bin/drush cex -y
+  - ./../vendor/bin/drush sql-drop -y
   - ./../vendor/bin/drush sql-cli -y < clean-install.sql
   - ./../vendor/bin/drush cim -y
